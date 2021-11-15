@@ -49,7 +49,6 @@ document.getElementById('orig').onclick = function(){
 }
 var slider = document.getElementById('slider');
 var volume = document.getElementById('volume');
-
 slider.oninput = function() {
 	volume.innerHTML = this.value + "%";
 	video.volume = this.value/100;
