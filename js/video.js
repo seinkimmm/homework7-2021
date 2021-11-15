@@ -54,12 +54,16 @@ slider.oninput = function() {
 	video.volume = this.value/100;
 	console.log(this.value/100)
 }
+var count = 0;
 document.getElementById('play').onclick = function()
 {
-
+	if (count == 0){
+		volume.innerHTML = this.value + "%";
+		count = count +1;
+	}
    video.play();
    console.log("Play Video");
-   volume.innerHTML = "100%";
+
 }
 var mute = document.getElementById('mute')
 document.getElementById('mute').onclick = function()
